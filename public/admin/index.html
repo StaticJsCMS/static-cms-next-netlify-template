@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <!-- Include the script that builds the page and powers Netlify CMS -->
+    <script src="https://unpkg.com/@staticcms/core@%5E1.0.0-alpha1/dist/static-cms-core.js"></script>
+    <script>
+      var PostPreview = CMS.createClass({
+        render: function () {
+          var entry = this.props.entry;
+          var date = entry.getIn(["data", "date"]);
+          return h(
+            "div",
+            { className: "content" },
+            h("h1", {}, entry.getIn(["data", "title"])),
+            h("time", {}, entry.getIn(["data", "date"])),
+            h("div", {}, this.props.widgetFor("body"))
+          );
+        },
+      });
+      CMS.registerPreviewTemplate("posts", PostPreview);
+    </script>
+  </body>
+</html>
