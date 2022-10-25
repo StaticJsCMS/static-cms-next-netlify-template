@@ -13,7 +13,7 @@ Next.js blogging template for Netlify has already implemented these standard fea
 
 Deploy on your environment by clicking here:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wutali/nextjs-netlify-blog-template&stack=cms)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/StaticJsCMS/static-cms-nextjs-netlify-blog-template&stack=cms)
 
 Or access the following demo site:
 
@@ -41,7 +41,7 @@ To create your blog using the template, open your terminal, `cd` into the direct
 and run the following command:
 
 ```
-npx create-next-app your-blog --example "https://github.com/wutali/nextjs-netlify-blog-template"
+npx create-next-app your-blog --example "https://github.com/StaticJsCMS/static-cms-nextjs-netlify-blog-template"
 ```
 
 After that, set up your project as following the Netlify blog:
@@ -77,35 +77,35 @@ src
 The category metadata that associates with content have the same relationship with the authors' one.
 Then reference these implementations for adding new metadata:
 
-- [public/admin/config.yml](/public/admin/config.yml#L51): author metadata definition for Netlify CMS
+- [public/admin/config.yml](/public/admin/config.yml#L51): author metadata definition for Static CMS
 - [src/lib/authors.tsx](/src/lib/authors.ts): fetches metadata and defines utility functions for components
-- [meta/authors.yml](/src/meta/authors.yml): author content managed by Netlify CMS
+- [meta/authors.yml](/src/meta/authors.yml): author content managed by Static CMS
 - [src/components/PostLayout.tsx](/src/components/PostLayout.tsx): displays author content for each page
 
 You understood they have four steps to add the category metadata on your project after you read the above source codes:
 
-1. Define the category metadata on the above Netlify config file
+1. Define the category metadata on the above Static CMS config file
 2. Create an empty file named with `categories.yml` under [meta](/src/meta/) directory
 3. Create a new module for fetching category metadata
 4. Display the category metadata on [src/components/PostLayout.tsx](/src/components/PostLayout.tsx#L75) or other components you want
 
-It is all you have to do. After that, you can access Netlify CMS and create new categories at any time.
+It is all you have to do. After that, you can access Static CMS and create new categories at any time.
 
-### Locale settings for Netlify CMS
+### Locale settings for Static CMS
 
 Modify [config.yml](/public/admin/config.yml) and
 [index.html](/public/admin/index.html) under [public/admin](/public/admin/) directory
 as following instructions:
 
-[Netlify CMS - Configuration Options #Locale](https://www.netlifycms.org/docs/configuration-options/#locale)
+[Static CMS - Configuration Options #Locale](https://staticjscms.netlify.app/docs/configuration-options/#locale)
 
 ## References
 
-- [Netlify CMS Documentation](https://www.netlifycms.org/docs/intro/)
+- [Static CMS Documentation](https://staticjscms.netlify.app/docs/intro/)
 - [Building a Markdown blog with Next 9.4 and Netlify](https://www.netlify.com/blog/2020/05/04/building-a-markdown-blog-with-next-9.4-and-netlify/)
 - [Hugo Theme - Codex](https://github.com/jakewies/hugo-theme-codex)
 - [Next.js Starter Template for TypeScript](https://github.com/vercel/next-learn-starter/tree/master/typescript-final)
-- [Building Blog with NextJS and Netlify CMS](https://dev.to/mefaba/building-blog-with-nextjs-and-netlify-cms-fom)
+- [Building Blog with NextJS and Static CMS](https://dev.to/mefaba/building-blog-with-nextjs-and-netlify-cms-fom)
 - [Unicons](https://github.com/Iconscout/unicons)
 
 ## License
