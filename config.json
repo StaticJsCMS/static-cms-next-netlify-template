@@ -1,10 +1,13 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
+  "base_url": "https://staticjs-nextjs-netlify-blog.netlify.app",
+  "site_title": "Next.js Static CMS Blog",
   "site_description": "Next.js blog template for Netlify",
   "site_keywords": [
     {
       "keyword": "Next.js"
+    },
+    {
+      "keyword": "Static CMS"
     },
     {
       "keyword": "Netlify"
@@ -15,5 +18,5 @@
   ],
   "posts_per_page": 5,
   "twitter_account": "@my-account",
-  "github_account": "wutali"
+  "github_account": "myaccount"
 }
