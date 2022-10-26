@@ -17,7 +17,7 @@ Deploy on your environment by clicking here:
 
 Or access the following demo site:
 
-[Next.js blog template for Netlify](https://nextjs-netlify-blog-template.netlify.app/)
+[Next.js blog template for Netlify](https://static-cms-nextjs-netlify-blog-templa.netlify.app/)
 
 ## Features
 
