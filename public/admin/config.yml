@@ -108,18 +108,18 @@ collections:
         name: "date"
         widget: "datetime"
         format: "yyyy-MM-dd"
-        dateFormat: "yyyy-MM-dd"
-        timeFormat: false
+        date_format: "yyyy-MM-dd"
+        time_format: false
       - label: Author
         name: "author"
         widget: relation
         collection: "meta"
         file: "authors"
-        searchFields:
+        search_fields:
           - "authors.*.name"
-        displayFields:
+        display_fields:
           - "authors.*.name"
-        valueField: "authors.*.slug"
+        value_field: "authors.*.slug"
       - label: Tags
         label_singular: "Tag"
         name: "tags"
@@ -131,11 +131,11 @@ collections:
           widget: relation
           collection: "meta"
           file: "tags"
-          searchFields:
+          search_fields:
             - "tags.*.name"
-          displayFields:
+          display_fields:
             - "tags.*.name"
-          valueField: "tags.*.slug"
+          value_field: "tags.*.slug"
       - label: "Body"
         name: "body"
         widget: "markdown"
