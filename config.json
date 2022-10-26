@@ -1,7 +1,7 @@
 {
   "base_url": "https://staticjs-nextjs-netlify-blog.netlify.app",
   "site_title": "Next.js Static CMS Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "site_description": "Next.js blog template for Static CMS on Netlify",
   "site_keywords": [
     {
       "keyword": "Next.js"

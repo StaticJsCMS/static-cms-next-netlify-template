@@ -10,7 +10,7 @@
     <!-- Include the script that builds the page and powers Static CMS -->
     <script src="https://unpkg.com/@staticcms/core@%5E1.0.0-alpha1/dist/static-cms-core.js"></script>
     <script>
-      var PostPreview = CMS.createClass({
+      var PostPreview = createClass({
         render: function () {
           var entry = this.props.entry;
           var date = entry.getIn(["data", "date"]);
@@ -24,6 +24,7 @@
         },
       });
       CMS.registerPreviewTemplate("posts", PostPreview);
+	  CMS.init();
     </script>
   </body>
 </html>
