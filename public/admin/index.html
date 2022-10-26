@@ -13,18 +13,18 @@
       var PostPreview = createClass({
         render: function () {
           var entry = this.props.entry;
-          var date = entry.getIn(["data", "date"]);
+          var date = entry.data.date;
           return h(
             "div",
             { className: "content" },
-            h("h1", {}, entry.getIn(["data", "title"])),
-            h("time", {}, entry.getIn(["data", "date"])),
+            h("h1", {}, entry.data.title),
+            h("time", {}, entry.data.date),
             h("div", {}, this.props.widgetFor("body"))
           );
         },
       });
       CMS.registerPreviewTemplate("posts", PostPreview);
-	  CMS.init();
+      CMS.init();
     </script>
   </body>
 </html>
