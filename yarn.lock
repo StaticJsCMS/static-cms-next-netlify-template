@@ -6933,10 +6933,10 @@ scheduler@^0.20.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-schema-dts@^0.8.2:
-  version "0.8.2"
-  resolved "https://registry.npmjs.org/schema-dts/-/schema-dts-0.8.2.tgz"
-  integrity sha512-whRg7QF9wmPfrwAi4NRT/bjMBIdHvzpr4excNN00hn+U2aFXx9NB3JKfooUMJLDqpGEqnZpA61f5muw9lQ50ZA==
+schema-dts@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/schema-dts/-/schema-dts-0.11.0.tgz#9fc671cefa60b28506b0ac7ed905a41a6417cd8a"
+  integrity sha512-vQgm1BTUb+PYNayCFXb3R6xXovzdigRIDKZ4BWthmJwqrxJZHNGsDXE7k/iXVcPI8vxHVcAaeQ7QNP9RrlQDEw==
 
 scriptjs@^2.5.9:
   version "2.5.9"
