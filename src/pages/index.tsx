@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import Layout from "../components/Layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
@@ -9,10 +10,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <script
-          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          async
-        />
+        <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async />
       </Head>
       <Layout>
         <BasicMeta url={"/"} />
