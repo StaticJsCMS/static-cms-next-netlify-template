@@ -6,7 +6,7 @@ type Props = {
 export default function Author({ author }: Props) {
   return (
     <>
-      <span>{author.name}</span>
+      <span>{author?.name}</span>
       <style jsx>
         {`
           span {
