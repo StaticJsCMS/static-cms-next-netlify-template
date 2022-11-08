@@ -1760,10 +1760,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@staticcms/core@1.0.0-alpha44":
-  version "1.0.0-alpha44"
-  resolved "https://registry.yarnpkg.com/@staticcms/core/-/core-1.0.0-alpha44.tgz#da255cc603996a21be80c40d7561324128e28b85"
-  integrity sha512-I/GBA+3f6fp7ETZy9SYoN/0/N42kK5BhjGiJhBBAp24+2qVe6APwx7LlYtK2R/T4/+zNIW20qZC0yCejf4y3Bw==
+"@staticcms/core@1.0.0-alpha45":
+  version "1.0.0-alpha45"
+  resolved "https://registry.yarnpkg.com/@staticcms/core/-/core-1.0.0-alpha45.tgz#fc3c95984e02fe8f92d5ccd9ffd3c8df5f6f2d98"
+  integrity sha512-0Zl+ZDuMGsveRor/4dTOi22QPyp0fyc1qDo9SFdzSMeCKW6lgWHvCFZy4rJ+q7Pzu3brYG8f7L6BVho0rL7K5A==
   dependencies:
     "@emotion/babel-preset-css-prop" "11.10.0"
     "@emotion/css" "11.10.0"

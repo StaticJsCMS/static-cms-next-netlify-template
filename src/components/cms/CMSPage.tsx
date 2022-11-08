@@ -12,7 +12,10 @@ interface PostData {
   body: string;
 }
 
-const PostPreview: FC<TemplatePreviewProps<PostData>> = ({ entry, widgetFor }) => {
+const PostPreview: FC<TemplatePreviewProps<PostData>> = ({
+  entry,
+  widgetFor,
+}) => {
   return (
     <div className="content">
       <h1>{entry.data.title}</h1>
@@ -36,10 +39,24 @@ const CMSPage = () => {
       data: "https://example.com/",
     });
 
+    console.log("init");
     CMS.init({ config });
   }, []);
 
-  return <div />;
+  return (
+    <div>
+      <style jsx global>{`
+        html,
+        body {
+          height: 100%;
+        }
+
+        #__next {
+          display: none;
+        }
+      `}</style>
+    </div>
+  );
 };
 
 CMSPage.displayName = "CMSPage";
