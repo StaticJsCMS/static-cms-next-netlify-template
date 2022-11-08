@@ -39,7 +39,6 @@ const CMSPage = () => {
       data: "https://example.com/",
     });
 
-    console.log("init");
     CMS.init({ config });
   }, []);
 
