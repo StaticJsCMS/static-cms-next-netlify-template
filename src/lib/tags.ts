@@ -8,6 +8,7 @@ export type TagContent = {
 const tagMap: { [key: string]: TagContent } = generateTagMap();
 
 function generateTagMap(): { [key: string]: TagContent } {
+  console.log(tags);
   let result: { [key: string]: TagContent } = {};
   for (const tag of tags.tags) {
     result[tag.slug] = tag;
