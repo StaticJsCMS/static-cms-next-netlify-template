@@ -4,9 +4,8 @@ module.exports = ({
     config.module.rules.push(
       ...[
         {
-          test: /\.yml$/,
-          type: "json",
-          use: "yaml-loader",
+          test: /\.ya?ml$/,
+          use: "js-yaml-loader",
         },
         {
           test: /\.svg$/,
