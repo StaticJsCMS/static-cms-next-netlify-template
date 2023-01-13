@@ -5,10 +5,14 @@ type Props = {
   tag: TagContent;
 };
 export default function TagButton({ tag }: Props) {
+  if (!tag) {
+    return null;
+  }
+
   return (
     <>
       <Link href={"/posts/tags/[[...slug]]"} as={`/posts/tags/${tag.slug}`}>
-        <a>{tag.name}</a>
+        {tag.name}
       </Link>
       <style jsx>{`
         a {
