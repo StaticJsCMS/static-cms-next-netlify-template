@@ -1,7 +1,16 @@
 {
   "name": "static-cms-next-netlify-template",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.0-beta.0",
+  "license": "MIT",
+  "description": "A starter for a blog powered by Next and Static CMS",
+  "repository": "https://github.com/StaticJsCMS/static-cms-next-netlify-template",
+  "bugs": "https://github.com/StaticJsCMS/static-cms-next-netlify-template/issues",
+  "keywords": [
+    "next",
+    "static",
+    "cms",
+    "netlify"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,14 +19,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "@svgr/webpack": "6.5.1",
-    "@types/js-yaml": "4.0.5",
-    "@staticcms/core": "1.0.0-alpha45",
+    "@staticcms/core": "1.0.0-beta.12",
     "date-fns": "2.29.3",
     "gray-matter": "4.0.3",
     "js-yaml": "4.1.0",
-    "next": "12.3.2",
-    "next-mdx-remote": "4.2.0",
+    "next": "13.1.1",
+    "next-mdx-remote": "4.2.1",
     "normalize.css": "8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -25,12 +32,15 @@
     "schema-dts": "1.1.0"
   },
   "devDependencies": {
-    "@types/jest": "29.2.2",
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.25",
-    "jest": "29.3.0",
+    "@svgr/webpack": "6.5.1",
+    "@types/jest": "29.2.5",
+    "@types/js-yaml": "4.0.5",
+    "@types/node": "16.18.11",
+    "@types/react": "18.0.26",
+    "eslint-config-next": "13.1.1",
+    "jest": "29.3.1",
     "js-yaml-loader": "1.2.2",
     "ts-jest": "29.0.3",
-    "typescript": "4.8.4"
+    "typescript": "4.9.4"
   }
 }

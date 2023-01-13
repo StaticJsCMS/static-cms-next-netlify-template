@@ -12,10 +12,7 @@ interface PostData {
   body: string;
 }
 
-const PostPreview: FC<TemplatePreviewProps<PostData>> = ({
-  entry,
-  widgetFor,
-}) => {
+const PostPreview: FC<TemplatePreviewProps<PostData>> = ({ entry, widgetFor }) => {
   return (
     <div className="content">
       <h1>{entry.data.title}</h1>
