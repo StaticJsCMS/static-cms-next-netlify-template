@@ -24,7 +24,7 @@
     "gray-matter": "4.0.3",
     "js-yaml": "4.1.0",
     "next": "13.1.3",
-    "next-mdx-remote": "4.2.1",
+    "next-mdx-remote": "4.3.0",
     "normalize.css": "8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
