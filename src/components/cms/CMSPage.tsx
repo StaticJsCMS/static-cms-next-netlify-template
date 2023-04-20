@@ -1,5 +1,6 @@
 import CMS from "@staticcms/core";
 import { useEffect } from "react";
+import '@staticcms/core/dist/main.css';
 
 import config from "./config";
 
