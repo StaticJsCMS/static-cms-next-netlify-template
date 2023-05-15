@@ -19,7 +19,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@staticcms/core": "2.3.3-dev",
+    "@staticcms/core": "2.3.3",
     "date-fns": "2.29.3",
     "gray-matter": "4.0.3",
     "js-yaml": "4.1.0",
