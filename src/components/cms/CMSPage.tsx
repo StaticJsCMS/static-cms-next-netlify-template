@@ -2,7 +2,7 @@ import CMS from "@staticcms/core";
 import { useEffect } from "react";
 import '@staticcms/core/dist/main.css';
 
-import config from "./config";
+import config from "@/config";
 
 import type { TemplatePreviewProps } from "@staticcms/core";
 import type { FC } from "react";
@@ -16,14 +16,14 @@ interface PostData {
 const PostPreview: FC<TemplatePreviewProps<PostData>> = ({ entry, widgetFor }) => {
   return (
     <div className="content">
-      <h1>{entry.data.title}</h1>
-      <time>{entry.data.date}</time>
+      <h1>{entry.data?.title}</h1>
+      <time>{entry.data?.date}</time>
       <div>{widgetFor("body")}</div>
     </div>
   );
 };
 
-const CMSPage = () => {
+const CMSPage: FC = () => {
   useEffect(() => {
     if (process.env.NODE_ENV === "development") {
       config.local_backend = true;

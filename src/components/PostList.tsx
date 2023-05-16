@@ -1,25 +1,27 @@
-import React from "react";
-import { PostContent } from "../lib/posts";
+import Pagination from "./Pagination";
 import PostItem from "./PostItem";
 import TagLink from "./TagLink";
-import Pagination from "./Pagination";
-import { TagContent } from "../lib/tags";
 
-type Props = {
+import type { PostContent } from "@/lib/posts";
+import type { TagContent } from "@/lib/tags";
+import type { FC } from "react";
+
+export interface PostListProps {
   posts: PostContent[];
   tags: TagContent[];
   pagination: {
     current: number;
     pages: number;
   };
-};
-export default function PostList({ posts, tags, pagination }: Props) {
+}
+
+const PostList: FC<PostListProps> = ({ posts, tags, pagination }) => {
   return (
-    <div className={"container"}>
-      <div className={"posts"}>
-        <ul className={"post-list"}>
+    <div className="flex my-0 mx-auto max-w-[1200px] w-full py-0 px-6">
+      <div className="flex flex-col flex-auto">
+        <ul className="flex-[1_0_auto]">
           {posts.map((it, i) => (
-            <li key={i}>
+            <li key={i} className="mb-6">
               <PostItem post={it} />
             </li>
           ))}
@@ -29,56 +31,19 @@ export default function PostList({ posts, tags, pagination }: Props) {
           pages={pagination.pages}
           link={{
             href: (page) => (page === 1 ? "/posts" : "/posts/page/[page]"),
-            as: (page) => (page === 1 ? null : "/posts/page/" + page),
+            as: (page) => (page === 1 ? "" : "/posts/page/" + page),
           }}
         />
       </div>
-      <ul className={"categories"}>
+      <ul className="hidden md:block">
         {tags.map((it, i) => (
-          <li key={i}>
+          <li key={i} className="mb-3">
             <TagLink tag={it} />
           </li>
         ))}
       </ul>
-      <style jsx>{`
-        .container {
-          display: flex;
-          margin: 0 auto;
-          max-width: 1200px;
-          width: 100%;
-          padding: 0 1.5rem;
-        }
-        ul {
-          margin: 0;
-          padding: 0;
-        }
-        li {
-          list-style: none;
-        }
-        .posts {
-          display: flex;
-          flex-direction: column;
-          flex: 1 1 auto;
-        }
-        .posts li {
-          margin-bottom: 1.5rem;
-        }
-        .post-list {
-          flex: 1 0 auto;
-        }
-        .categories {
-          display: none;
-        }
-        .categories li {
-          margin-bottom: 0.75em;
-        }
-
-        @media (min-width: 769px) {
-          .categories {
-            display: block;
-          }
-        }
-      `}</style>
     </div>
   );
-}
+};
+
+export default PostList;

@@ -14,12 +14,21 @@ const config: Config = {
         {
           name: "general",
           label: "Site Config",
-          file: "config.json",
+          file: "content/config.json",
           description: "General site settings",
           fields: [
-            { label: "URL", name: "base_url", widget: "string", hint: "Do not enter the trailing slash of the URL" },
+            {
+              label: "URL",
+              name: "base_url",
+              widget: "string",
+              hint: "Do not enter the trailing slash of the URL",
+            },
             { label: "Site title", name: "site_title", widget: "string" },
-            { label: "Site description", name: "site_description", widget: "string" },
+            {
+              label: "Site description",
+              name: "site_description",
+              widget: "string",
+            },
             {
               label: "Site keywords",
               name: "site_keywords",
@@ -27,8 +36,16 @@ const config: Config = {
               summary: "{{fields.keyword.keyword}}",
               fields: [{ label: "Keyword", name: "keyword", widget: "string" }],
             },
-            { label: "Twitter account", name: "twitter_account", widget: "string" },
-            { label: "GitHub account", name: "github_account", widget: "string" },
+            {
+              label: "Twitter account",
+              name: "twitter_account",
+              widget: "string",
+            },
+            {
+              label: "GitHub account",
+              name: "github_account",
+              widget: "string",
+            },
           ],
         },
       ],
@@ -42,7 +59,7 @@ const config: Config = {
         {
           name: "authors",
           label: "Authors",
-          file: "meta/authors.yml",
+          file: "content/meta/authors.yml",
           description: "Author descriptions",
           fields: [
             {
@@ -51,8 +68,18 @@ const config: Config = {
               label_singular: "Author",
               widget: "list",
               fields: [
-                { label: "Slug", name: "slug", widget: "string", hint: "The part of a URL identifies the author" },
-                { label: "Name", name: "name", widget: "string", hint: "First and Last" },
+                {
+                  label: "Slug",
+                  name: "slug",
+                  widget: "string",
+                  hint: "The part of a URL identifies the author",
+                },
+                {
+                  label: "Name",
+                  name: "name",
+                  widget: "string",
+                  hint: "First and Last",
+                },
                 { label: "Introduction", name: "introduction", widget: "text" },
               ],
             },
@@ -61,7 +88,7 @@ const config: Config = {
         {
           name: "tags",
           label: "Tags",
-          file: "meta/tags.yml",
+          file: "content/meta/tags.yml",
           description: "List of tags",
           fields: [
             {
@@ -70,8 +97,18 @@ const config: Config = {
               label_singular: "Tag",
               widget: "list",
               fields: [
-                { label: "Slug", name: "slug", widget: "string", hint: "The part of a URL identifies the tag" },
-                { label: "Display Name", name: "name", widget: "string", hint: "Tag name for displaying on the site" },
+                {
+                  label: "Slug",
+                  name: "slug",
+                  widget: "string",
+                  hint: "The part of a URL identifies the tag",
+                },
+                {
+                  label: "Display Name",
+                  name: "name",
+                  widget: "string",
+                  hint: "Tag name for displaying on the site",
+                },
               ],
             },
           ],

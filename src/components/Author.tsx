@@ -1,19 +1,12 @@
-import { AuthorContent } from "../lib/authors";
+import type { AuthorContent } from "@/lib/authors";
+import type { FC } from "react";
 
-type Props = {
+export interface AuthorProps {
   author: AuthorContent;
-};
-export default function Author({ author }: Props) {
-  return (
-    <>
-      <span>{author?.name}</span>
-      <style jsx>
-        {`
-          span {
-            color: #9b9b9b;
-          }
-        `}
-      </style>
-    </>
-  );
 }
+
+const Author: FC<AuthorProps> = ({ author }) => {
+  return <span className="text-gray-400">{author?.name}</span>;
+};
+
+export default Author;

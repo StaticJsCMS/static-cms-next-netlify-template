@@ -1,33 +1,38 @@
 import Link from "next/link";
-import { TagContent } from "../lib/tags";
 
-type Props = {
+import type { TagContent } from "@/lib/tags";
+import type { FC } from "react";
+
+export interface TagButtonProps {
   tag: TagContent;
-};
-export default function TagButton({ tag }: Props) {
+}
+
+const TagButton: FC<TagButtonProps> = ({ tag }) => {
   if (!tag) {
     return null;
   }
 
   return (
     <>
-      <Link href={"/posts/tags/[[...slug]]"} as={`/posts/tags/${tag.slug}`}>
+      <Link
+        href={"/posts/tags/[[...slug]]"}
+        as={`/posts/tags/${tag.slug}`}
+        className="
+          inline-block
+          rounded-[3px]
+          bg-[rgba(21_132_125_0.2)]
+          color-[#15847d]
+          transition-colors
+          py-1
+          px-2
+          active:bg-[rgba(21_132_125_0.4)]
+          hover:bg-[rgba(21_132_125_0.4)]
+        "
+      >
         {tag.name}
       </Link>
-      <style jsx>{`
-        a {
-          display: inline-block;
-          border-radius: 3px;
-          background-color: rgba(21, 132, 125, 0.2);
-          color: #15847d;
-          transition: background-color 0.3s ease;
-          padding: 0.25em 0.5em;
-        }
-        a:active,
-        a:hover {
-          background-color: rgba(21, 132, 125, 0.4);
-        }
-      `}</style>
     </>
   );
-}
+};
+
+export default TagButton;

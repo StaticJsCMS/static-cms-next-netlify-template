@@ -1,10 +1,12 @@
-import dynamic from "next/dynamic";
-import { useMemo } from "react";
+"use client";
 
-const Admin = () => {
+import dynamic from "next/dynamic";
+import { FC, useMemo } from "react";
+
+const Admin: FC = () => {
   const CMSPage = useMemo(
     () =>
-      dynamic(() => import("../components/cms/CMSPage"), {
+      dynamic(() => import("@/components/cms/CMSPage"), {
         ssr: false,
       }),
     []

@@ -1,46 +1,38 @@
-import { generatePagination } from "../lib/pagination";
+import { generatePagination } from "@/lib/pagination";
 import Link from "next/link";
 
-type Props = {
+import type { FC } from "react";
+
+export interface PaginationProps {
   current: number;
   pages: number;
   link: {
     href: (page: number) => string;
     as: (page: number) => string;
   };
-};
-export default function Pagination({ current, pages, link }: Props) {
+}
+
+const Pagination: FC<PaginationProps> = ({ current, pages, link }) => {
   const pagination = generatePagination(current, pages);
   return (
-    <ul>
+    <ul className="m-0 mt-12 p-0">
       {pagination.map((it, i) => (
-        <li key={i}>
+        <li key={i} className="inline-block mr-4 text-gray-400 text-xl">
           {it.excerpt ? (
             "..."
           ) : (
-            <Link className={it.page === current ? "active" : null} href={link.href(it.page)} as={link.as(it.page)}>
+            <Link
+              className={it.page === current ? "text-gray-800 font-bold" : undefined}
+              href={link.href(it.page ?? 1)}
+              as={link.as(it.page ?? 1)}
+            >
               {it.page}
             </Link>
           )}
         </li>
       ))}
-      <style jsx>{`
-        ul {
-          list-style: none;
-          margin: 3rem 0 0 0;
-          padding: 0;
-        }
-        li {
-          display: inline-block;
-          margin-right: 1em;
-          color: #9b9b9b;
-          font-size: 1.25rem;
-        }
-        a.active {
-          color: #222;
-          font-weight: bold;
-        }
-      `}</style>
     </ul>
   );
-}
+};
+
+export default Pagination;

@@ -1,15 +1,11 @@
-export default function Copyright() {
+import type { FC } from "react";
+
+const Copyright: FC = () => {
   return (
     <>
-      <p>&copy; 2020</p>
-      <style jsx>
-        {`
-          p {
-            font-size: 0.75rem;
-            text-align: center;
-          }
-        `}
-      </style>
+      <p className="text-center text-xs">&copy; 2020</p>
     </>
   );
-}
+};
+
+export default Copyright;

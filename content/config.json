@@ -2,20 +2,7 @@
   "base_url": "https://next-template.staticcms.org",
   "site_title": "Next.js Static CMS Blog",
   "site_description": "Next.js blog template for Static CMS on Netlify",
-  "site_keywords": [
-    {
-      "keyword": "Next.js"
-    },
-    {
-      "keyword": "Static CMS"
-    },
-    {
-      "keyword": "Netlify"
-    },
-    {
-      "keyword": "React"
-    }
-  ],
+  "site_keywords": ["Next.js", "Static CMS", "Netlify", "React"],
   "posts_per_page": 5,
   "twitter_account": "@my-account",
   "github_account": "myaccount"

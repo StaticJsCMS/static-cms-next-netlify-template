@@ -1,13 +1,18 @@
 import Link from "next/link";
-import { TagContent } from "../lib/tags";
 
-type Props = {
+import type { TagContent } from "@/lib/tags";
+import type { FC } from "react";
+
+export interface TagProps {
   tag: TagContent;
-};
-export default function Tag({ tag }: Props) {
+}
+
+const Tag: FC<TagProps> = ({ tag }) => {
   return (
     <Link href={"/posts/tags/[[...slug]]"} as={`/posts/tags/${tag.slug}`}>
       {"#" + tag.name}
     </Link>
   );
-}
+};
+
+export default Tag;

@@ -1,26 +1,28 @@
-import React from "react";
-import { PostContent } from "../lib/posts";
-import { TagContent } from "../lib/tags";
-import PostItem from "./PostItem";
 import Pagination from "./Pagination";
+import PostItem from "./PostItem";
 
-type Props = {
+import type { PostContent } from "@/lib/posts";
+import type { TagContent } from "@/lib/tags";
+import type { FC } from "react";
+
+export interface TagPostListProps {
   posts: PostContent[];
   tag: TagContent;
   pagination: {
     current: number;
     pages: number;
   };
-};
-export default function TagPostList({ posts, tag, pagination }: Props) {
+}
+
+const TagPostList: FC<TagPostListProps> = ({ posts, tag, pagination }) => {
   return (
-    <div className={"container"}>
-      <h1>
-        All posts / <span>{tag.name}</span>
+    <div className="my-0 mx-auto w-full py-0 px-6 flex flex-col">
+      <h1 className="mr-8 p-0 font-thin text-3xl text-gray-400 md:text-4xl">
+        All posts / <span className="font-bold text-gray-800">{tag.name}</span>
       </h1>
-      <ul>
+      <ul className="m-0 p-0 flex-[1_0_auto]">
         {posts.map((it, i) => (
-          <li key={i}>
+          <li key={i} className="mb-7">
             <PostItem post={it} />
           </li>
         ))}
@@ -30,50 +32,11 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
         pages={pagination.pages}
         link={{
           href: () => "/posts/tags/[[...slug]]",
-          as: (page) =>
-            page === 1
-              ? "/posts/tags/" + tag.slug
-              : `/posts/tags/${tag.slug}/${page}`,
+          as: (page) => (page === 1 ? "/posts/tags/" + tag.slug : `/posts/tags/${tag.slug}/${page}`),
         }}
       />
-      <style jsx>
-        {`
-          .container {
-            margin: 0 auto;
-            max-width: 1200px;
-            width: 100%;
-            padding: 0 1.5rem;
-            display: flex;
-            flex-direction: column;
-          }
-          h1 {
-            margin: 0 0 2rem;
-            padding: 0;
-            font-weight: 100;
-            font-size: 1.75rem;
-            color: #9b9b9b;
-          }
-          h1 span {
-            font-weight: bold;
-            color: #222;
-          }
-          ul {
-            margin: 0;
-            padding: 0;
-            flex: 1 0 auto;
-          }
-          li {
-            list-style: none;
-            margin-bottom: 1.5rem;
-          }
-
-          @media (min-width: 769px) {
-            h1 {
-              font-size: 2rem;
-            }
-          }
-        `}
-      </style>
     </div>
   );
-}
+};
+
+export default TagPostList;

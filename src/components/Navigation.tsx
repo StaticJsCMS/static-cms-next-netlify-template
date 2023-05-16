@@ -1,86 +1,61 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import Burger from "./Burger";
-import { useState } from "react";
+"use client";
 
-export default function Navigation() {
-  const router = useRouter();
+import classNames from "@/util/classNames.util";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import Burger from "./Burger";
+
+import type { FC } from "react";
+
+const Navigation: FC = () => {
+  const pathname = usePathname();
   const [active, setActive] = useState(false);
   return (
     <>
       <Burger active={active} onClick={() => setActive(!active)} />
-      <div className={"container " + (active ? "active" : "")}>
-        <ul>
-          <li>
-            <Link className={router.pathname === "/" ? "active" : null} href="/">
+      <div className="w-0 md:w-28 md:block">
+        <ul
+          className={classNames(
+            `
+              opacity-0
+              w-full
+              h-screen
+              text-center
+              m-0
+              p-0
+              fixed
+              top-0
+              bg-white
+              flex
+              flex-col
+              justify-center
+              z-[1]
+              translate-y-full
+              transition-opacity
+              md:opacity-100
+              md:w-28
+              md:top-auto
+              md:block
+              md:translate-y-0
+            `,
+            active && "opacity-100 translate-y-0"
+          )}
+        >
+          <li className="mb-7 text-3xl p-0 pr-6 last:mb-0 md:text-lg md:pr-0">
+            <Link className={classNames(pathname === "/" && "text-gray-900 font-bold")} href="/">
               about
             </Link>
           </li>
-          <li>
-            <Link className={router.pathname.startsWith("/posts") ? "active" : null} href="/posts">
+          <li className="mb-7 text-3xl p-0 pr-6 last:mb-0 md:text-lg md:pr-0">
+            <Link className={classNames(pathname.startsWith("/posts") && "text-gray-900 font-bold")} href="/posts">
               blog
             </Link>
           </li>
         </ul>
-        <style jsx>
-          {`
-            .container {
-              width: 0;
-            }
-            ul {
-              opacity: 0;
-              width: 100%;
-              height: 100vh;
-              text-align: right;
-              list-style: none;
-              margin: 0;
-              padding: 0;
-              position: fixed;
-              top: 0;
-              background-color: #fff;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              z-index: 1;
-              transform: translateY(100%);
-              transition: opacity 200ms;
-            }
-            .active ul {
-              opacity: 1;
-              transform: translateY(0);
-            }
-            li {
-              margin-bottom: 1.75rem;
-              font-size: 2rem;
-              padding: 0 1.5rem 0 0;
-            }
-            li:last-child {
-              margin-bottom: 0;
-            }
-            .active {
-              color: #222;
-            }
-
-            @media (min-width: 769px) {
-              .container {
-                width: 7rem;
-                display: block;
-              }
-              ul {
-                opacity: 1;
-                width: 7rem;
-                top: auto;
-                display: block;
-                transform: translateY(0);
-              }
-              li {
-                font-size: 1rem;
-                padding: 0;
-              }
-            }
-          `}
-        </style>
       </div>
     </>
   );
-}
+};
+
+export default Navigation;

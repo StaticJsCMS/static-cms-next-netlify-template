@@ -1,8 +1,11 @@
-type Props = {
+import type { FC } from "react";
+
+export interface BurgerProps {
   active: boolean;
   onClick: () => void;
-};
-export default function Burger({ active, onClick }: Props) {
+}
+
+const Burger: FC<BurgerProps> = ({ active, onClick }) => {
   return (
     <div className={"container " + (active ? "active" : "")} onClick={onClick}>
       <div className={"meat meat-1"} />
@@ -57,4 +60,6 @@ export default function Burger({ active, onClick }: Props) {
       </style>
     </div>
   );
-}
+};
+
+export default Burger;
