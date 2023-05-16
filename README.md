@@ -1,4 +1,4 @@
-![Next.js blogging template for Static CMS on Netlify](https://github.com/StaticJsCMS/static-cms-next-netlify-template/assets/1388138/51fc586a-b150-4ca7-afd8-95c18961b14f)
+![Next.js blogging template for Static CMS on Netlify](https://user-images.githubusercontent.com/1388138/197867836-58de8783-9712-4196-937f-4101b1327612.png)
 
 [![MADE BY Next.js](https://img.shields.io/badge/MADE%20BY%20Next.js-000000.svg?style=flat&logo=Next.js&labelColor=000)](https://nextjs.org/)
 
