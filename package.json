@@ -9,29 +9,36 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@staticcms/core": "2.3.3",
-    "autoprefixer": "10.4.14",
-    "date-fns": "2.30.0",
-    "gray-matter": "4.0.3",
-    "js-yaml": "4.1.0",
-    "next": "13.4.2",
-    "next-mdx-remote": "4.4.1",
-    "postcss": "8.4.23",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-schemaorg": "2.0.0",
-    "schema-dts": "1.1.2",
-    "tailwindcss": "3.3.2"
+    "@staticcms/core": "^3.4.5",
+    "autoprefixer": "^10.4.14",
+    "date-fns": "^2.30.0",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "next": "^14.0.1",
+    "next-mdx-remote": "^4.4.1",
+    "postcss": "^8.4.23",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-schemaorg": "^2.0.0",
+    "schema-dts": "^1.1.2",
+    "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
-    "@svgr/webpack": "8.0.1",
-    "@types/js-yaml": "4.0.5",
-    "@types/node": "20.1.5",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
-    "eslint": "8.40.0",
-    "eslint-config-next": "13.4.2",
-    "js-yaml-loader": "1.2.2",
-    "typescript": "5.0.4"
-  }
+    "@svgr/webpack": "^8.0.1",
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "^20.1.5",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "eslint": "^8.40.0",
+    "eslint-config-next": "^13.4.2",
+    "js-yaml-loader": "^1.2.2",
+    "typescript": "^5.0.4"
+  },
+  "browserslist": [
+    "chrome 64",
+    "edge 79",
+    "firefox 67",
+    "opera 51",
+    "safari 12"
+  ]
 }
