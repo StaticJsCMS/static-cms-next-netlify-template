@@ -2,6 +2,9 @@
   "name": "static-cms-next-netlify-template",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+   "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -26,7 +29,7 @@
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",
     "@types/js-yaml": "^4.0.5",
-    "@types/node": "^20.1.5",
+    "@types/node": "^18.18.9",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "eslint": "^8.40.0",
