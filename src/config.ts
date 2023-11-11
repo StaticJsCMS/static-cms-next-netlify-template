@@ -162,24 +162,23 @@ const config: Config = {
               search_fields: ["tags.*.name"],
               display_fields: ["tags.*.name"],
               value_field: "tags.*.slug",
-              create: true,
               create: {
-                 collection: "tags",
-                fields: [
+                collection: "tags",
+                  fields: [
+                    {
+                      label: "Slug",
+                      name: "slug",
+                      widget: "string",
+                      hint: "The part of a URL identifies the tag",
+                  },
                   {
-                  label: "Slug",
-                  name: "slug",
-                  widget: "string",
-                  hint: "The part of a URL identifies the tag",
-                },
-                {
-                  label: "Display Name",
-                  name: "name",
-                  widget: "string",
-                  hint: "Tag name for displaying on the site",
-                },
-                  ]
-                }
+                    label: "Display Name",
+                    name: "name",
+                    widget: "string",
+                    hint: "Tag name for displaying on the site",
+                  },
+                ],
+              },
             },
           ],
         },
