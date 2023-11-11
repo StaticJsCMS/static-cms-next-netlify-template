@@ -163,7 +163,6 @@ const config: Config = {
               display_fields: ["tags.*.name"],
               value_field: "tags.*.slug",
             },
-            { label: "Title", name: "title", widget: "string" },
           ],
         },
         { label: "Body", name: "body", widget: "markdown" },
