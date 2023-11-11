@@ -162,6 +162,7 @@ const config: Config = {
               search_fields: ["tags.*.name"],
               display_fields: ["tags.*.name"],
               value_field: "tags.*.slug",
+              create: true,
             },
           ],
         },
