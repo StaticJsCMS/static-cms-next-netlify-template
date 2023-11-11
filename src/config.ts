@@ -162,7 +162,8 @@ const config: Config = {
               search_fields: ["tags.*.name"],
               display_fields: ["tags.*.name"],
               value_field: "tags.*.slug",
-     options: {
+            },
+                 options: {
         create: true,
         collection: "tags",
         fields: [
@@ -180,7 +181,6 @@ const config: Config = {
           },
         ],
       },
-            },
           ],
         },
         { label: "Body", name: "body", widget: "markdown" },
