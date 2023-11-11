@@ -1,5 +1,4 @@
 import type { Config } from "@staticcms/core";
-
 const config: Config = {
   backend: { name: "git-gateway", branch: "main" },
   media_folder: "public/images",
