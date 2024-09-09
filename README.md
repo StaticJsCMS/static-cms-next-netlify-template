@@ -8,12 +8,6 @@ There are some boilerplate or tutorials for the combination of Next.js and Netli
 
 Next.js blogging template for Netlify has already implemented these standard features for building blogs with only using Next.js and Netlify stacks.
 
-## Demo
-
-Deploy on your environment by clicking here:
-
-[Next.js blog template for Netlify](https://next-template.staticcms.org/)
-
 ## Features
 
 - **Tagging**: organizes content by tags
@@ -46,10 +40,6 @@ After that, set up your project, following the Netlify documentation:
 ### Static CMS Config
 
 [config.yml](src/config.ts)
-
-## References
-
-- [Static CMS Documentation](https://staticcms.org/docs/intro/)
 
 ## License
 
